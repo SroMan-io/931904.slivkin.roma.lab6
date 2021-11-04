@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title>Frontend Task №6</title>
+	<style>
+
+body {
+	margin:0;
+}
+
+.mainel {
+	margin-left:auto;
+	margin-right:auto;
+	background-color: black;
+	width:1000px;
+	height:550px;
+}
+
+.button {
+	text-align: center;
+	font-size: 24px;
+	width:33%;
+	height:50px;
+	color: white;
+	background-color: red;
+	border: none;
+	margin-top:2px;
+	display: inline-block;	
+}
+
+.leftel{
+	width:50%;	
+	background-color: blue;
+	margin-top:2px;
+	float:left;
+	height:100%;
+}
+
+.rightel {
+	margin-top:2px;
+	float:right;
+	background-color: green;
+	width:50%;
+	height:100%;	
+}
+
+.pict {	
+	width:460px;
+	height:400px;
+	margin-top:20px;
+	margin-left:20px;	
+}
+
+	</style>
+
+</head>
+
+
+<body>
+
+<script>
+function display(num){
+	if (num == 1) {
+	  var elem = document.getElementById("n1") 
+	  elem.style.width = "95%"
+	  var fon = document.getElementById("n2") 
+	  fon.style.width = "5%"
+	  var pict2 = document.getElementById("pict2") 
+	  pict2.style.display = "none"
+	  var pict1 = document.getElementById("pict1") 	  
+	  pict1.style.width = "70%"
+	  pict1.style.display = "block"	
+	}
+	else if (num == 2) {
+	  var elem = document.getElementById("n1") 
+	  elem.style.width = "50%"
+	  var fon = document.getElementById("n2") 
+	  fon.style.width = "50%"
+	  var pict2 = document.getElementById("pict2") 
+	  pict2.style.display = "block"
+	  pict2.style.width = "460px"
+	  var pict1 = document.getElementById("pict1") 
+	  pict1.style.display = "block"	  
+	  pict1.style.width = "460px"
+	}	
+	else if (num == 3){
+	  var elem = document.getElementById("n1") 
+	  elem.style.width = "5%"
+	  var fon = document.getElementById("n2") 
+	  fon.style.width = "95%"
+	  var pict1 = document.getElementById("pict1") 
+	  pict1.style.display = "none"
+	  var pict2 = document.getElementById("pict2") 	  
+	  pict2.style.width = "70%"
+	  pict2.style.display = "block"
+	}
+}
+</script>
+
+<div id = "fonn" class = "mainel" >
+
+<button class="button" onclick = "display(1)">Левая колонка</button>
+<button class="button" onclick = "display(2)">Обе две</button>
+<button class="button" onclick = "display(3)">Правая колонка</button>
+
+
+<div id = "n1" class = "leftel"> 
+<img id = "pict1" class = "pict" src="cat.jpg" alt="Cat" />
+</div>
+
+<div id = "n2" class  = "rightel"> 
+<img id = "pict2" class = "pict" src="dog.jpg" alt="Dog" />
+</div>
+
+</div>
+
+
+</body>
+</html>
